@@ -23,6 +23,18 @@
 				Role (s):<security:authentication property="principal.authorities"/>
 	
 		
+		
+		<!-- link points to  /leaders for managers-->
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+		
+		</p>
+		<!-- link points to  /systems for admins-->
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">IT Meeting</a>
+		
+		</p>
+		
 		<!-- logout button
 	 -->
 	 <form:form action="${pageContext.request.contextPath}/logout" method="POST">
