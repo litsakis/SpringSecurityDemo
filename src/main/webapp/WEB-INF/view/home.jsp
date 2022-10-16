@@ -23,18 +23,23 @@
 				Role (s):<security:authentication property="principal.authorities"/>
 	
 		
-		
+		<security:authorize access="hasRole('MANAGER')">
 		<!-- link points to  /leaders for managers-->
 		<p>
 			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
 		
 		</p>
+		
+		</security:authorize>
+		
+				<security:authorize access="hasRole('ADMIN')">
+		
 		<!-- link points to  /systems for admins-->
 		<p>
 			<a href="${pageContext.request.contextPath}/systems">IT Meeting</a>
 		
 		</p>
-		
+			</security:authorize>
 		<!-- logout button
 	 -->
 	 <form:form action="${pageContext.request.contextPath}/logout" method="POST">
